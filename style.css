@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+
+body {
+    --black: rgb(34, 34, 34);
+    --white: seashell;
+    --sharp-accent: #4ECDC4;
+
+    color: var(--black);
+    font-family: 'Source Code Pro', monospace;
+    background: salmon;
+}
+
+main {
+    margin: 0 auto;
+    padding: 10vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h1::first-letter {
+    font-size: 4rem;
+}
+
+h1 > code {
+    color: var(--white);
+    filter: drop-shadow(0 0 1rem var(--white));
+    text-decoration: var(--sharp-accent) wavy underline;
+    text-underline-offset: initial;
+    transition: 0.5s ease-in-out;
+    transition-property: filter, text-decoration, text-underline-offset;
+}
+
+h1 > code:hover {
+    filter: drop-shadow(0 0 0.2rem var(--white));
+    text-decoration: gold wavy underline;
+    text-underline-offset: 0.2rem;
+}
+
+p {
+    font-size: 2rem;
+}
